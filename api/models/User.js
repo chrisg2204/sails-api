@@ -29,7 +29,13 @@ module.exports = {
 			required: false
 		}
 	},
+	signIn: (toFind) => {
+		return User.findOne(toFind);
+	},
 	addUser: (toCreate) => {
 		return User.create(toCreate);
+	},
+	findOneUser: (toFind) => {
+		return User.findOne(toFind);
 	}
 };
